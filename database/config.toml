@@ -1,0 +1,24 @@
+#
+# Server Configuration Parameters
+#
+
+[server]
+# API token found in the Agents tab in manager.telemetryapp.com
+api_token = "abc123abc123abc123abc123abc123abc123"
+# Submit new metrics in a batch at most every 1 second
+submission_interval = "1s"
+
+#
+# Flow Configurations 
+#
+
+#
+# A specific flow
+#
+[[flow]]
+# The flow tag
+tag = "database_gauge_1"
+# run the script every 2 seconds
+interval = "2s"
+# The node.js program to execute to generate updates
+exec = "database.js"
