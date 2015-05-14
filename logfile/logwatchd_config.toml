@@ -1,0 +1,14 @@
+# Submit metrics every 10 seconds 
+interval = 10
+
+# The Graphite server (agent) port
+server = 'localhost:2004'
+
+# A specific search parameter
+[[search]]
+# The logfile to search
+filename = '/var/log/system.log'
+# The label for the search
+label = 'launchd'
+# A regex to search for
+regex = 'launchd'

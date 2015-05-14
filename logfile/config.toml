@@ -1,0 +1,42 @@
+#
+# Server Configuration Parameters
+#
+
+[server]
+# API token found in the Agents tab in manager.telemetryapp.com
+api_token = "abc123abc123abc123abc123abc123abc123"
+# Submit new metrics in a batch at most every 1 second
+submission_interval = "1s"
+
+#
+# Local data storage for aggregation and graphite data
+#
+
+[data]
+# Location to store
+path = "/tmp/agent.sqlite3"
+# Expire data after 7 days
+ttl = "7d"
+
+#
+# Graphite Configuration Parameters
+#
+
+[graphite]
+# Listen on UDP port 2004 on all interfaces for Graphite data
+listen_udp = ":2004"
+
+#
+# Flow Configurations 
+#
+
+#
+# A specific flow
+#
+[[flow]]
+# The flow tag
+tag = "logfile_gauge_1"
+# run the script every 2 seconds
+interval = "2s"
+# The ASL script to run to generate updates
+script = "logfile.asl"
