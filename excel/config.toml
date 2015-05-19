@@ -1,0 +1,27 @@
+#
+# Server Configuration Parameters
+#
+
+[server]
+# API token found in the Agents tab in manager.telemetryapp.com
+api_token = "abc123abc123abc123abc123abc123abc123"
+# Submit new metrics in a batch at most every 1 second
+submission_interval = "1s"
+
+[data]
+path = "/tmp/agent.db"
+
+#
+# Flow Configurations 
+#
+
+#
+# A specific flow
+#
+[[flow]]
+# The flow tag
+tag = "excel_gauge_1"
+# run the script every 10 seconds
+interval = "10s"
+# The ASL script to run
+script = "excel.asl"

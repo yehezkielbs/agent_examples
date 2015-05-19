@@ -1,0 +1,1 @@
+value = excel("test.xlsx").cells(ranges:"B10").item(0)
