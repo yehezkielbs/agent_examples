@@ -20,7 +20,7 @@ path = "/tmp/agent.db"
 #
 [[flow]]
 # The flow tag
-tag = "excel_gauge_1"
+tag = "excel_value_1"
 # run the script every 10 seconds
 interval = "10s"
 # The ASL script to run
