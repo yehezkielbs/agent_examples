@@ -21,23 +21,27 @@ MongoClient.connect(url, function (err, db) {
     process.exit(1);
 
   } else {
-    db.close();
-
-     // Get the users collection
+    // Get the users collection
     var users = db.collection('users');
 
     // Get the users count
-    var count = users.count();
+    users.count(function (err, count) {
+      if (err) {
+        console.error(err);
+        process.exit(1);
+      }
 
-    // Create the response based on the number flow structure
-    var metrics = {
-    	number: {
-    		value: count
-    	}
-    };
+      // Create the response based on the number flow structure
+      var metrics = {
+        number: {
+          value: count
+        }
+      };
 
-    // Output the metrics
-    console.log(JSON.stringify(metrics));
+      // Output the metrics
+      console.log(JSON.stringify(metrics));
+
+      db.close();
+    });
   }
 });
-

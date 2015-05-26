@@ -9,6 +9,14 @@ api_token = "abc123abc123abc123abc123abc123abc123"
 submission_interval = "1s"
 
 #
+# Data Configuration Parameters
+#
+
+[data]
+path = "/tmp/agent.sqlite3"
+ttl = "1h"
+
+#
 # Flow Configurations 
 #
 

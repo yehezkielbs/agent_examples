@@ -20,7 +20,7 @@ path = "/tmp/agent.db"
 #
 [[flow]]
 # The flow tag
-tag = "api_value_1"
+tag = "api_text_1"
 # run the script every 2 seconds
 interval = "10s"
 # The ASL script to run
